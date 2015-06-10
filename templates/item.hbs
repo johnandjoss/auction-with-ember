@@ -1,0 +1,39 @@
+<h1>{{model.title}}</h1>
+
+<p>Description: {{model.description}}</p>
+<p>Owner: {{model.owner}}</p>
+<p>Bid Number: {{model.bidNumber}}</p>
+<p>Suggested Starting Bid: {{model.price}}</p>
+
+{{#if isEditing}}
+<form>
+    <div class="form-group">
+      <label for="title">Title</label>
+      {{input  id="title" value=model.title class="form-control"}}
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      {{textarea value=model.description id="description" class="form-control" rows="15"}}
+    </div>
+    <div class="form-group">
+      <label for="owner">Owner</label>
+      {{input value=model.owner id="owner" class="form-control"}}
+    </div>
+    <div class="form-group">
+      <label for="bidNumber">Bid Number</label>
+      {{input value=model.bidNumber id="bidNumber" class="form-control"}}
+    </div>
+    <div class="form-group">
+      <label for="price">Price</label>
+      {{input value=model.price id="price" class="form-control"}}
+    </div>
+
+    <button class="btn btn-primary" {{action 'save'}}>Save</button>
+  </form>
+
+{{else}}
+  <p>{{body}}</p>
+
+  <button class="btn btn-primary" {{action 'edit'}}>Edit</button>
+{{/if}}
