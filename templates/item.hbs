@@ -4,10 +4,10 @@
   <div class="col-md-6">
     <h3>Here are the details on this item:</h3>
     <div class="item-info">
-      <p>Description:  {{model.description}}</p>
-      <p>Owner:  {{model.owner}}</p>
-      <p>Bid Number:  {{model.bidNumber}}</p>
-      <p>Suggested Starting Bid:  {{model.price}}</p>
+      <p><span class="bold-text">Description:</span> {{model.description}}</p>
+      <p><span class="bold-text">Owner: </span> {{model.owner}}</p>
+      <p><span class="bold-text">Bid Number: </span> {{model.bidNumber}}</p>
+      <p><span class="bold-text">Suggested Starting Bid: </span> {{model.price}}</p>
     </div>
 {{#if isEditing}}
 <form>
@@ -38,26 +38,61 @@
 
 {{else}}
   <p>{{body}}</p>
-
   <button class="btn btn-primary" {{action 'edit'}}>Edit</button>
   <button class="btn btn-danger" {{action 'delete'}}>Delete</button>
+{{/if}}
 
-  {{/if}}
     <div class="feedback-area">
+
       <h4> If questions or comments, leave feedback below</h4>
-    {{#each model.pictures}}
+    {{#each model.feedbacks}}
       <p>{{text}}</p>
     {{/each}}
 
-    <p>{{#link-to 'new-picture' model.id class="btn btn-primary"}}Feedback {{/link-to}}</p>
+    <p class="links">{{#link-to 'new-feedback' model.id class="btn btn-primary" }}Feedback {{/link-to}}</p>
+
+
+    {{outlet}}
+
     </div>
   </div>
 
   <div class="col-md-6">
     <h3>Pictures of {{model.title}} </h3>
+
     <div class="item-info picture-group">
 
-      {{outlet}}
+      <div class="row">
+        <div class="col-md-6">
+          <img src="croporangefrog.jpg" {{action 'showFullsize'}} alt="redfrog"/>
+        </div>
+        <div class="col-md-6">
+          <img src="croporangefrog.jpg" {{action 'showFullsize2'}} alt="redfrog"/>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <img src="croprainbowfrom.jpg" {{action 'showFullsize3'}} alt="redfrog"/>
+        </div>
+        <div class="col-md-6">
+          <img src="croprainbowfrom.jpg" {{action 'showFullsize4'}} alt="redfrog"/>
+        </div>
+      </div>
     </div>
+
+    <div class="fake hidden col-md-12">
+      <img src="closefrog.jpg" {{action 'hideFullsize'}} alt="redfrog"/>
+    </div>
+    <div class="fake2 hidden col-md-12">
+      <img src="fatfrog.jpg" {{action 'hideFullsize2'}} alt="redfrog"/>
+    </div>
+    <div class="fake3 hidden col-md-12">
+      <img src="standingfrog.jpg" {{action 'hideFullsize3'}} alt="redfrog"/>
+    </div>
+    <div class="fake4 hidden col-md-12">
+      <img src="swimmingfrog.jpg" {{action 'hideFullsize4'}} alt="redfrog"/>
+    </div>
+
   </div>
 </div>

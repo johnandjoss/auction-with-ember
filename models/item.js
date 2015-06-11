@@ -4,5 +4,5 @@ Auction.Item = DS.Model.extend({
   owner: DS.attr(),
   bidNumber: DS.attr(),
   price: DS.attr(),
-  pictures: DS.hasMany('picture', {async: true})
+  feedbacks: DS.hasMany('feedback', {async: true})
 });
