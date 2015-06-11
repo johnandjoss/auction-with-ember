@@ -33,3 +33,36 @@ h3 {
 .hidden {
 	display: none;
 }
+ul {
+	list-style: none;
+	padding: 0;
+	text-align: center;
+
+}
+ .btn-primary{
+	background-color: #010326;
+	color: white;
+}
+.center-list {
+	margin: 0 auto;
+	width: 50%;
+}
+.center-list > p {
+	text-align: center;
+
+}
+.center-list > h1 {
+	font-family: 'Pacifico', cursive;
+	font-size: 58px;
+	color: #267341;
+}
+
+.left {
+	margin-top: 80px;
+}
+.right {
+	margin-left: -153px;
+}
+.container.main-box {
+	margin-top: 75px;
+}
