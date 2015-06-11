@@ -1,5 +1,6 @@
 <h1>{{model.title}}</h1>
-
+<div class="row">
+<div class="col-md-6">
 <p>Description: {{model.description}}</p>
 <p>Owner: {{model.owner}}</p>
 <p>Bid Number: {{model.bidNumber}}</p>
@@ -36,8 +37,12 @@
   <p>{{body}}</p>
 
   <button class="btn btn-primary" {{action 'edit'}}>Edit</button>
+  <button class="btn btn-danger" {{action 'delete'}}>Delete</button>
 {{/if}}
 
+
+</div>
+<div class="col-md-6">
 <h2>Pictures of {{model.title}} </h2>
 
 {{#each model.pictures}}
@@ -45,6 +50,7 @@
 {{/each}}
 
 <p>{{#link-to 'new-picture' model.id class="btn btn-default"}}New picture {{/link-to}}</p>
-
 {{outlet}}
+</div>
+</div>
 

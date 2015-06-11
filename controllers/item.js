@@ -10,8 +10,13 @@ Auction.ItemController = Ember.Controller.extend({
       this.get('model').save();
 
       this.transitionToRoute('items');
-    }
-
+    },
+    delete: function(){
+      if(confirm("are you sure?")) {
+        this.get('model').destroyRecord();
+        this.transitionToRoute('items');
+      }
+}
   }
 
 });
