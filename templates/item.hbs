@@ -41,20 +41,23 @@
 
   <button class="btn btn-primary" {{action 'edit'}}>Edit</button>
   <button class="btn btn-danger" {{action 'delete'}}>Delete</button>
-{{/if}}
 
-</div>
+  {{/if}}
+    <div class="feedback-area">
+      <h4> If questions or comments, leave feedback below</h4>
+    {{#each model.pictures}}
+      <p>{{text}}</p>
+    {{/each}}
+
+    <p>{{#link-to 'new-picture' model.id class="btn btn-primary"}}Feedback {{/link-to}}</p>
+    </div>
+  </div>
 
   <div class="col-md-6">
     <h3>Pictures of {{model.title}} </h3>
     <div class="item-info picture-group">
-      {{#each model.pictures}}
-        <p>{{text}}</p>
-      {{/each}}
 
-      <p>{{#link-to 'new-picture' model.id class="btn btn-default"}}New Question {{/link-to}}</p>
       {{outlet}}
     </div>
   </div>
 </div>
-
