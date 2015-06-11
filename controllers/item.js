@@ -6,7 +6,7 @@ Auction.ItemController = Ember.Controller.extend({
     },
     save: function() {
       this.set('isEditing', false);
-      debugger;
+  
       this.get('model').save();
 
       this.transitionToRoute('items');

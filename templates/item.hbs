@@ -37,3 +37,14 @@
 
   <button class="btn btn-primary" {{action 'edit'}}>Edit</button>
 {{/if}}
+
+<h2>Pictures of {{model.title}} </h2>
+
+{{#each model.pictures}}
+  <p>{{text}}</p>
+{{/each}}
+
+<p>{{#link-to 'new-picture' model.id class="btn btn-default"}}New picture {{/link-to}}</p>
+
+{{outlet}}
+
