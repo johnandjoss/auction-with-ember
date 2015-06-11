@@ -66,3 +66,7 @@ ul {
 .container.main-box {
 	margin-top: 75px;
 }
+
+.navbar-default .navbar-nav > li > a {
+	color:  #267341;
+}
