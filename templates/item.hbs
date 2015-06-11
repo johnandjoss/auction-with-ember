@@ -33,6 +33,46 @@
       {{input value=model.price id="price" class="form-control"}}
     </div>
 
+    <div class="form-group">
+      <label for="pic1">Picture One</label>
+      {{input value=pic1 id="pic1" class="form-control"}}
+    </div>
+
+    <div class="form-group">
+      <label for="pic2">Picture Two</label>
+      {{input value=pic2 id="pic2" class="form-control"}}
+    </div>
+
+    <div class="form-group">
+      <label for="pic3">Picture Three</label>
+      {{input value=pic3 id="pic3" class="form-control"}}
+    </div>
+
+    <div class="form-group">
+      <label for="pic4">Picture Four</label>
+      {{input value=pic4 id="pic4" class="form-control"}}
+    </div>
+
+    <div class="form-group">
+      <label for="pic11">Picture One-Large</label>
+      {{input value=pic11 id="pic11" class="form-control"}}
+    </div>
+
+    <div class="form-group">
+      <label for="pic22">Picture Two-Large</label>
+      {{input value=pic22 id="pic22" class="form-control"}}
+    </div>
+
+    <div class="form-group">
+      <label for="pic33">Picture Three-Large</label>
+      {{input value=pic33 id="pic33" class="form-control"}}
+    </div>
+
+    <div class="form-group">
+      <label for="pic44">Picture Four-Large</label>
+      {{input value=pic44 id="pic44" class="form-control"}}
+    </div>
+
     <button class="btn btn-primary" {{action 'save'}}>Save</button>
   </form>
 
@@ -64,34 +104,34 @@
 
       <div class="row">
         <div class="col-md-6">
-          <img src="croporangefrog.jpg" {{action 'showFullsize'}} alt="redfrog"/>
+          <img {{bind-attr src=model.pic1}} {{action 'showFullsize'}} alt="crop1"/>
         </div>
         <div class="col-md-6">
-          <img src="croporangefrog.jpg" {{action 'showFullsize2'}} alt="redfrog"/>
+          <img {{bind-attr src=model.pic2}} {{action 'showFullsize2'}} alt="crop2"/>
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-6">
-          <img src="croprainbowfrom.jpg" {{action 'showFullsize3'}} alt="redfrog"/>
+          <img {{bind-attr src=model.pic3}} {{action 'showFullsize3'}} alt="crop3"/>
         </div>
         <div class="col-md-6">
-          <img src="croprainbowfrom.jpg" {{action 'showFullsize4'}} alt="redfrog"/>
+          <img {{bind-attr src=model.pic4}} {{action 'showFullsize4'}} alt="crop4"/>
         </div>
       </div>
     </div>
 
     <div class="fake hidden col-md-12">
-      <img src="closefrog.jpg" {{action 'hideFullsize'}} alt="redfrog"/>
+      <img {{bind-attr src=model.pic11}} {{action 'hideFullsize'}}alt="large1">
     </div>
     <div class="fake2 hidden col-md-12">
-      <img src="fatfrog.jpg" {{action 'hideFullsize2'}} alt="redfrog"/>
+      <img {{bind-attr src=model.pic22}} {{action 'hideFullsize2'}} alt="large2">
     </div>
     <div class="fake3 hidden col-md-12">
-      <img src="standingfrog.jpg" {{action 'hideFullsize3'}} alt="redfrog"/>
+      <img {{bind-attr src=model.pic33}} {{action 'hideFullsize3'}} alt="large3">
     </div>
     <div class="fake4 hidden col-md-12">
-      <img src="swimmingfrog.jpg" {{action 'hideFullsize4'}} alt="redfrog"/>
+      <img {{bind-attr src=model.pic44}} {{action 'hideFullsize4'}} alt="large4">
     </div>
 
   </div>
