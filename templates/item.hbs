@@ -1,11 +1,14 @@
 <h1>{{model.title}}</h1>
-<div class="row">
-<div class="col-md-6">
-<p>Description: {{model.description}}</p>
-<p>Owner: {{model.owner}}</p>
-<p>Bid Number: {{model.bidNumber}}</p>
-<p>Suggested Starting Bid: {{model.price}}</p>
 
+<div class="row">
+  <div class="col-md-6">
+    <h3>Here are the details on this item:</h3>
+    <div class="item-info">
+      <p>Description:  {{model.description}}</p>
+      <p>Owner:  {{model.owner}}</p>
+      <p>Bid Number:  {{model.bidNumber}}</p>
+      <p>Suggested Starting Bid:  {{model.price}}</p>
+    </div>
 {{#if isEditing}}
 <form>
     <div class="form-group">
@@ -40,17 +43,18 @@
   <button class="btn btn-danger" {{action 'delete'}}>Delete</button>
 {{/if}}
 
-
 </div>
-<div class="col-md-6">
-<h2>Pictures of {{model.title}} </h2>
 
-{{#each model.pictures}}
-  <p>{{text}}</p>
-{{/each}}
+  <div class="col-md-6">
+    <h3>Pictures of {{model.title}} </h3>
+    <div class="item-info picture-group">
+      {{#each model.pictures}}
+        <p>{{text}}</p>
+      {{/each}}
 
-<p>{{#link-to 'new-picture' model.id class="btn btn-default"}}New picture {{/link-to}}</p>
-{{outlet}}
-</div>
+      <p>{{#link-to 'new-picture' model.id class="btn btn-default"}}New Question {{/link-to}}</p>
+      {{outlet}}
+    </div>
+  </div>
 </div>
 

@@ -1,0 +1,19 @@
+body {
+	font-family: 'Oswald', sans-serif;
+	font-weight: 300;
+	font-size: 17px;
+}
+
+h1 {
+	font-family: 'Oswald', sans-serif;
+	font-weight: bold;
+	font-size: 45px;
+	text-align: center;
+}
+
+h3 {
+	text-align: center;
+}
+.item-info {
+	margin-top: 35px;
+}
